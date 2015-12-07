@@ -1,0 +1,29 @@
+{
+  "name": "YamlWatch",
+  "version": "0.0.1",
+  "description": "Yaml Watcher for node.js",
+  "author": "joykrishnamondal <joykrishnamondal@gmail.com>",
+  "main": "YamlWatch.js",
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/JoyKrishnaMondal/YamlWatch.git"
+},
+  "keywords": [
+  "livescript",
+  "DevOps",
+  "Yaml Compiler",
+  "Simple",
+  "tiny"
+],
+  "dependencies": {
+    "yamljs":"0.2.4",
+    "GeneralDev":"https://github.com/JoyKrishnaMondal/GeneralDev.git",
+    "cli-color":"*",
+    "GetRidOfError":"https://github.com/JoyKrishnaMondal/GetRidOfError.git"
+  },
+  "devDependencies": {
+    "simple-livescript-watch": "*"
+  },
+  "license": "MIT License"
+}
+  
