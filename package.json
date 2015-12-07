@@ -16,10 +16,10 @@
   "tiny"
 ],
   "dependencies": {
-    "yamljs":"0.2.4",
+    "yaml-js":"*",
     "GeneralDev":"https://github.com/JoyKrishnaMondal/GeneralDev.git",
     "cli-color":"*",
-    "GetRidOfError":"https://github.com/JoyKrishnaMondal/GetRidOfError.git"
+    "GetRidOfError":"https://github.com/JoyKrishnaMondal/GetRidOfError.git" 
   },
   "devDependencies": {
     "simple-livescript-watch": "*"

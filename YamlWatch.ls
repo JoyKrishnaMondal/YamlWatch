@@ -1,4 +1,4 @@
-yamljs = require "yamljs"
+yjs = require "yaml-js"
 
 delimit = require "path" |> (.sep)
 
@@ -24,19 +24,19 @@ Config =
 
 		try
 
-			ParsedYaml = yamljs.parse data
+			ParsedYaml = yjs.load data
+
 
 		catch Problem
-
+			console.log 
 			console.error Red "Yaml Error:" + Yellow ReadFilePath
-			console.error  Red "Line:" + Yellow Problem.parsedLine
-			console.error Red "Snippet:" + Yellow Problem.snippet
+			console.error  Red "Line:" + Red "[" + Yellow Problem.problem_mark.line + Yellow ":" + Yellow Problem.problem_mark.column + Red "]"
+			console.error Red "Snippet:" + Yellow Problem.problem_mark.buffer
 
 			return 
 
 
 		Json = JSON.stringify ParsedYaml, null,1 
-
 		WriteFilePath = Config.DirToSave + delimit + FileName + "." + Config.FinalExtention
 
 
@@ -57,6 +57,5 @@ WithDir = (Init = true,watch = true,clean = false,DirToSave = process.cwd!,DirTo
 	AutoBuild Init,watch,clean
 
 	return
-
 
 module.exports = WithDir
