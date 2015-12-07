@@ -24,7 +24,6 @@
           ParsedYaml = yjs.load(data);
         } catch (e$) {
           Problem = e$;
-          console.log;
           console.error(Red("Yaml Error:" + Yellow(ReadFilePath)));
           console.error(Red("Line:" + Red("[" + Yellow(Problem.problem_mark.line + Yellow(":" + Yellow(Problem.problem_mark.column + Red("]")))))));
           console.error(Red("Snippet:" + Yellow(Problem.problem_mark.buffer)));
